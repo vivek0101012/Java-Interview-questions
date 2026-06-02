@@ -36,6 +36,6 @@ public class Test {
 // The object being created is:
 // new UPIPayment()
 // which implements the Payment interface.
-// Therefore, a reference of type Payment can point to a UPIPayment object.
-// /The major advantage is that our code depends on the abstraction (Payment) rather than a specific implementation (UPIPayment)
+// Therefore,her than a specific imp a reference of type Payment can point to a UPIPayment object.
+// /The major advantage is that our code depends on the abstraction (Payment) ratlementation (UPIPayment)
 // the same can be implemented later by the creaditcartPayment etc.
