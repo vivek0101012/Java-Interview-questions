@@ -52,14 +52,15 @@ public class Test4 {
 
 // 4 constructor start executing , since the class inherits another class so compiler adds a implicit super() to invoke parent constructor , 
 
-// 5 parent also has no constructor so compiler insert a no arg cosnt and intialize parent-- animal , and return
-//control to dog which intializes and jvm return address to ref variable.
+// 5 parent also has no constructor so compiler insert a no arg cosntructor  and intialize parent-- animal , and return
+//control to dog which intializes child class and jvm return address to ref variable.
 
-//7.since a.sound() has ref of animal so allowed methods are the methdos in animal class overriden or parents own implementation
+//6. now methods allowed to be executed are amonng those which are present in the refernce class type itself -> 
+//such as sound others will give compile time err
 
-// 8 . since there is overriden variation compiler start executing sound , which has first line super.sound(),
-//here super refer to parent animal so it runs the parent variation pritning animal sound amd return control to child dog 
+//7. since a.sound is overriden variation of the parent it starts executing,its first line is super.sound()
+//super refer to parent class so it executes parent variation of the sound printing "animal sound "
 
-//9. now child  print dog barking.
+//8. now control return  to child and  it prints "dog barking"
 
 
