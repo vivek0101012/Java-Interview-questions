@@ -1,15 +1,15 @@
 //1. what is the difference between shallow and deep copy ?
 
-// ans-> In shallow copy a new object is created for the outer object.
-// but there is no new object is created for the inner object rather 
-//the reference to inner  object is passed to the copy 
+// ans-> If a object contains an inner object (here it is done to follow  composition relationship) then In shallow copy  new object is created for the outer object.
+// but there is no new object  created for the inner one rather 
+//the reference to inner  object is passed to clone
 // this can lead to unpredictable corruption of data since both new and old point to same inner ref.
 
 // In deep copy a new outer object is created along with that 
 //  a new copy of nested  objects is also created , so new inner object is independent of 
 // the old  outer object.
 
-// clone () -> is the method of objet super class it is used to create a clone of a object with same state.
+// clone () -> is the method of object super class it is used to create a clone of a object with same state.
 // by default not every object allows cloning so we must implement cloneable 
 // marker interface and override the  clone method
 // without overridding it throws error - > clonNotsupported 
@@ -27,12 +27,12 @@ class Address {
 class Student
 implements  Cloneable {
 
-    Address address;
+     Address address;
     int id;
 
-    Student (int id,Address address){
+    Student (int id,String address){
          this.id=id;
-         this.address=address;
+         this.address=new Address (address);
     }
 
     @Override 
@@ -51,8 +51,7 @@ public  class Test7 {
 
     public static void main(String args[]){
     
-        Address address=new Address("delhite");
-        Student s1=new Student(19,address);
+        Student s1=new Student(19,"delhi");
         try {
             
                     Student s2= (Student)s1.clone();
