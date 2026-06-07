@@ -1,6 +1,12 @@
 
-class dog{
+class dog implements Cloneable{
     int x=10;
+    @Override
+    public Object clone()
+    throws CloneNotSupportedException {
+      return (dog) super.clone();
+    }
+
 }
 class cat {
     int x=10;
@@ -22,10 +28,17 @@ public class Ex{
     public static void main(String[] args) {
         
         dog d= new dog();
-        cat c=new cat();
-        String a="hellow";
-        String b="hellow";
-        System.out.println(a.equals(b));
+     
+        try {
+            
+                    dog d1=(dog) d.clone();
+
+                    System.out.println(d1.x);
+        } catch (Exception e) {
+
+                    
+        }
+
 
     }
 }
