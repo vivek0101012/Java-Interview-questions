@@ -1,8 +1,8 @@
 //1. what is the difference between shallow and deep copy ?
 
-// ans-> If a object contains an inner object (here it is done to follow  composition relationship) then In shallow copy  new object is created for the outer object.
-// but there is no new object  created for the inner one rather 
-//the reference to inner  object is passed to clone
+// ans-> In shallow copy a new object is created for the outer object.
+// but there is no new object is created for the inner object rather 
+//the reference to inner  object is passed to the copy 
 // this can lead to unpredictable corruption of data since both new and old point to same inner ref.
 
 // In deep copy a new outer object is created along with that 
@@ -13,8 +13,10 @@
 // by default not every object allows cloning so we must implement cloneable 
 // marker interface and override the  clone method
 // without overridding it throws error - > clonNotsupported 
-
 // we must override for the clone well to  copy the nested objects to other wise it result in a shallow copy
+// this method is although is discouraged and manual  copying or seriezable interface is used widely
+
+
 
 class Address {
     String value;
@@ -55,9 +57,11 @@ public  class Test7 {
         try {
             
                     Student s2= (Student)s1.clone();
-                    System.out.println(s1.address);
+                    System.out.println(s1.address);  //results in classname@hashcode since internally it runs classname.toString()
                     System.out.println(s2.address);
-                    // both the code give a diff address that means both are different object so we have successfully implemented deep copy in  java with clone ()
+                    // both the code give a diff address that means both are different object  in the heap memory , 
+                    // hence we have
+                    //successfully implemented deep copy in  java with clone () method
 
         } catch (Exception e) {
             System.out.println("failed");
