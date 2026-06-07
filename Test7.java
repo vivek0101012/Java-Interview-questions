@@ -1,9 +1,7 @@
 //1. what is the difference between shallow and deep copy ?
 
-// ans-> In shallow copy a new object is created for the outer object.
-// but there is no new object is created for the inner object rather 
-//the reference to inner  object is passed to the copy 
-// this can lead to unpredictable corruption of data since both new and old point to same inner ref.
+//Ans ->In  shallow copy a new heap object is created for outer object.for Inner no new duplicate heap object is created.The reference address of inner object is passed to the newly created clone.This means both  new and old  outer objects point to same inner reference. This can lead to unwanted corruption of data.
+
 
 // In deep copy a new outer object is created along with that 
 //  a new copy of nested  objects is also created , so new inner object is independent of 
