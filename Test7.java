@@ -1,20 +1,22 @@
 //1. what is the difference between shallow and deep copy ?
 
 // ans-> In shallow copy a new object is created for the outer object.
-// but there is no new object is created for the inner object rather 
-//the reference to inner  object is passed to the copy 
+// but there is no new object is created for the inner objects rather 
+//the reference to inner  objects is passed to the clone 
 // this can lead to unpredictable corruption of data since both new and old point to same inner ref.
 
 // In deep copy a new outer object is created along with that 
 //  a new copy of nested  objects is also created , so new inner object is independent of 
 // the old  outer object.
 
-// clone () -> is the method of objet super class it is used to create a clone of a object with same state.
+// clone () -> is the method of object super class it is used to create a clone of a object with same state.
 // by default not every object allows cloning so we must implement cloneable 
 // marker interface and override the  clone method
 // without overridding it throws error - > clonNotsupported 
-
 // we must override for the clone well to  copy the nested objects to other wise it result in a shallow copy
+// this method is although is discouraged and manual  copying or seriezable interface is used widely
+
+
 
 class Address {
     String value;
@@ -56,9 +58,11 @@ public  class Test7 {
         try {
             
                     Student s2= (Student)s1.clone();
-                    System.out.println(s1.address);
+                    System.out.println(s1.address);  //results in classname@hashcode since internally it runs classname.toString()
                     System.out.println(s2.address);
-                    // both the code give a diff address that means both are different object so we have successfully implemented deep copy in  java with clone ()
+                    // both the code give a diff address that means both are different object  in the heap memory , 
+                    // hence we have
+                    //successfully implemented deep copy in  java with clone () method
 
         } catch (Exception e) {
             System.out.println("failed");
