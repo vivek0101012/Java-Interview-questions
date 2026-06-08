@@ -2,10 +2,10 @@
 
 // ARRAY LIST --> concrete class in list interface . used to store objects, serve as a dynamic array 
 
-// how internally array list works? Talk about the resizng and growth mechanis of array list ?
+// how internally array list works? Talk about the resizng and growth mechanics of array list ?
 
 //ans-> arraylist internally uses a object array called backing array to store the elements 
-// it maintians the reference  object array(also called backing array)
+// it maintians the reference to object array.
 
 // capacity-> maximum count of elements that can be stored in the current arraylist without resizing 
 // intially at 0 element capacity =0 with first insertion jvm makes it 10 and from there it grows 1.5x on each resizing 
@@ -22,7 +22,7 @@
 //5. new elements are added in empty space 
 
 // growth mechanism-> choosen to be 1.5 x to avoid extra memory over head of 2x or 3x  and 
-// to avoid the frequient resizing if just +1 was done each time 
+// to avoid the frequient resizing , as resizing on each insertion could have affected performance. 
 
 // it is  expected to give approx size at start in order to  improve performance  -- incase the use case require frequent updates/clear 
 
@@ -34,7 +34,7 @@
 // ans-> there are 2 ways to make array list immutable
 //1. .unmodfiable list ->, example -> Collections.unmodifiableList(new arraylist <>())
 
-//2. .listof -> exmample   List<String> list =List.of("Java","Spring");'
+//2. .listof -> example   List<String> list =List.of("Java","Spring");'
 
 // any further modification to immutbale arraylist result in UnsupportedOperationException
 
@@ -57,5 +57,5 @@
 
 //ans -> final here is applied to the reference variable so it prevent 
 // assignment to another heap object instead of preventing object modification.
-//so we can chnage inner state of the object , but we can not change the
-//   object address  which the reference variable store 
+//and  we can chnage inner state of the object , but we can not change the
+// object address  which the reference variable store 
