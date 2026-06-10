@@ -1,6 +1,6 @@
 //1. what is the difference between shallow and deep copy ?
 
-//Ans ->In  shallow copy a new heap object is created for outer object.for Inner no new duplicate heap object
+//Ans >In  shallow copy a new heap object is created for outer object.for Inner no new duplicate heap object
 //is created.The reference address of inner object is passed to the newly created clone.This
 //means both  new and old  outer objects point to same inner reference. This can lead to unwanted corruption of data.
 
@@ -9,10 +9,10 @@
 //  a new copy of nested  objects is also created , so new inner object is independent of 
 // the old  outer object.
 
-// clone () -> is the method of object super class it is used to create a clone of a object with same state.
+// clone () > is the method of object super class it is used to create a clone of a object with same state.
 // by default not every object allows cloning so we must implement cloneable 
 // marker interface and override the  clone method
-// without overridding it throws error - > clonNotsupported 
+// without overridding it throws error  > clonNotsupported 
 // we must override for the clone well to  copy the nested objects to other wise it result in a shallow copy
 // this method is although is discouraged and manual  copying or seriezable interface is used widely
 

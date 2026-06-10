@@ -29,15 +29,15 @@ public class Test4 {
 
 // explain what is run time binding ?
 
-// ans-> for instance methods java uses the dynamic dispatching mechanism in which the run time object is used to determine
+// ans> for instance methods java uses the dynamic dispatching mechanism in which the run time object is used to determine
 //which variation of accessible methods (which are present in  the reference type variable) shoudld be used , this late binding 
 //to run time object is called run time bidning 
 
 
 // explain the override annotation uses?
 
-// ans-> it serves two purposes->
-//1.result in compile error in case wrong method name or signature are used to override -- without this java
+// ans> it serves two purposes>
+//1.result in compile error in case wrong method name or signature are used to override  without this java
 //would consider them new methods instead of overrding
 
 //2. it explicits the developer intention to override the method , improving readablity ,avoding bugs etc.
@@ -52,10 +52,10 @@ public class Test4 {
 
 // 4 constructor start executing , since the class inherits another class so compiler adds a implicit super() to invoke parent constructor , 
 
-// 5 parent also has no constructor so compiler insert a no arg cosntructor  and intialize parent-- animal , and return
+// 5 parent also has no constructor so compiler insert a no arg cosntructor  and intialize parent animal , and return
 //control to dog which intializes child class and jvm return address to ref variable.
 
-//6. now methods allowed to be executed are amonng those which are present in the refernce class type itself -> 
+//6. now methods allowed to be executed are amonng those which are present in the refernce class type itself > 
 //such as sound others will give compile time err
 
 //7. since a.sound is overriden variation of the parent it starts executing,its first line is super.sound()

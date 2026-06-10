@@ -40,7 +40,7 @@ public class Test2 {
 // C Constructor
 
 
-// When a `C` object is created, Java first initializes the parent portion of the object before initializing the child portion.
+// When a C object is created, Java first initializes the parent portion of the object before initializing the child portion.
 
 // Therefore:
 
@@ -56,7 +56,7 @@ public class Test2 {
 
 // ## Part B
 
-// ### Constructors are not inherited. Then why do constructors of `A` and `B` execute?
+// ### Constructors are not inherited. Then why do constructors of A and B execute?
 
 // ### Answer
 
@@ -98,7 +98,7 @@ public class Test2 {
 // super();
 
 
-// which invokes the constructor of `A`.
+// which invokes the constructor of A.
 
 // As a result:
 
@@ -115,7 +115,7 @@ public class Test2 {
 
 // ## Part C
 
-// ### What happens if we do not explicitly write `super()`?
+// ### What happens if we do not explicitly write super()?
 
 // ### Answer
 
@@ -147,9 +147,9 @@ public class Test2 {
 // }
 
 
-// This automatic insertion works only when the parent class contains a no-argument constructor.
+// This automatic insertion works only when the parent class contains a noargument constructor.
 
-// If the parent class does not contain a no-argument constructor, compilation fails.
+// If the parent class does not contain a noargument constructor, compilation fails.
 
 
 
@@ -169,11 +169,11 @@ public class Test2 {
 
 // However, constructors can be overloaded within the same class.
 
-// ---
+// 
 
 // ## Part E
 
-// ### Can we call both `this()` and `super()` inside the same constructor?
+// ### Can we call both this() and super() inside the same constructor?
 
 // ### Answer
 
@@ -205,7 +205,7 @@ public class Test2 {
 // }
 
 
-// results in a compile-time error.
+// results in a compiletime error.
 
 // A constructor may contain either:
 
@@ -220,7 +220,7 @@ public class Test2 {
 
 // as its first statement, but never both.
 
-// ---
+// 
 
 // ## Quick Revision
 
@@ -243,7 +243,7 @@ public class Test2 {
 // Compiler Inserts super()
 // =
 // Yes
-// (If Parent Has No-Arg Constructor)
+// (If Parent Has NoArg Constructor)
 
 
 // this() + super()

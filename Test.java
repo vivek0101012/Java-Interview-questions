@@ -1,5 +1,5 @@
 
-// Abstraction - implemented through interfaces 
+// Abstraction  implemented through interfaces 
 
 interface  Payment {
     void pay();

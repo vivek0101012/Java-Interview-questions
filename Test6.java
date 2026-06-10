@@ -23,7 +23,7 @@ System.out.println(s1.equals(s3));
 }
 // explain  what happens when  s1="java" and s2="java" execute
 
-//ans-1. This string creation process is called string literal creation
+//ans1. This string creation process is called string literal creation
 
 // 1. first jvm checks if the given literal exist in
 //  the string context pool or not .
@@ -38,7 +38,7 @@ System.out.println(s1.equals(s3));
 
 // Q. how is s3 different from the s1 and s2?
 
-//ans->  creation process of s3 is called  object creation using new 
+//ans>  creation process of s3 is called  object creation using new 
 
 //1. first jvm looks for the scp and  checks if object exist or not
 //2. if it does not exist then it create a new scp literal 

@@ -40,8 +40,8 @@ enum Size {
 
 //What is an Enum? Why was it introduced when Java already had static final constants?
 
-//ans-> enum are speacial class in java that are used to store predefined constants It was introduced in 
-//Java 5 to provide a type-safe and object-oriented alternative to traditional constants.
+//ans> enum are speacial class in java that are used to store predefined constants It was introduced in 
+//Java 5 to provide a typesafe and objectoriented alternative to traditional constants.
 
 // they are used since they are 
 //1  type safe
@@ -52,8 +52,8 @@ enum Size {
 
 //Are enum actually classes ?  How  java treats enum and its constants internally ?
 
-//ans-> enum are special class in java.
-// like ordinary classes they have - 
+//ans> enum are special class in java.
+// like ordinary classes they have  
 // field methods ,constructors
 
 //they are special because 
@@ -63,7 +63,7 @@ enum Size {
 
 
 // Can enum extend another class
-//ans-> No, enum can not extend another class  because enum internally already inherit 
+//ans> No, enum can not extend another class  because enum internally already inherit 
 //from the java.lang.enum. and we know that java does not allow multiple inheritance 
 //although enum can implement multiple interfaces.
 
