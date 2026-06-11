@@ -15,14 +15,21 @@
 
 // Thread Sharing
 
-// 1. so for security  and configurations purposes string are used widely in java application ,immmutablity guarantees that these values can not be changed or altered after validation, hence prevent accidental bugs that can break the application 
+// 1. so for security  and configurations purposes string are used widely in java application ,
+//immmutablity guarantees that these values can not be changed or altered after validation, hence
+//prevent accidental bugs that can break the application 
 
-// 2.scp -> to save memory java store string literal inside string constant pool(within heap), so if string already exist in scp , the same scp reference is passed to reference variable
-// ,now  in order to prevent one reference variable from accidentaly courrupting the data for others java ensure string remains immutable ;.
+// 2.scp -> to save memory java store string literal inside string constant pool(within heap), so if 
+//string already exist in scp , the same scp reference is passed to reference variable
+// ,now  in order to prevent one reference variable from accidentaly courrupting the data for 
+//others java ensure string remains immutable ;.
 
 // 3. immutability allows string to be thread safe , leading to safe usage in the multithreaded environments.
 
-//4. strings are widely used as keys in hashmap , so in order to not break the retrival and performance of hashmap java makes the string immutbale since a mutbale string can lead to change in hashcode,and we know hashmap uses the hashcode to find the bucket , so mutated keys can give wrong bucket value failing the retrival
+//4. strings are widely used as keys in hashmap , so in order to not break the retrival and
+//performance of hashmap java makes the string immutbale since a mutbale string can lead to change 
+//in hashcode,and we know hashmap uses the hashcode to find the bucket ,
+//so mutated keys can give wrong bucket value failing the retrival
 
 // 5. hashmap optimization -> java also caches the hashcode for performance optimization , immutable string makes the performance consistent 
 
@@ -30,11 +37,15 @@
 
 // 2. explain the concat ,or modifiacation behaviour of java ?
 
-// concat() never modifies the existing String object. Since String is immutable, Java creates a new String containing the combined characters and returns its reference. If the returned reference is ignored, the original String remains unchanged.
+// concat() never modifies the existing String object. Since String is immutable, Java creates a new String 
+//containing the combined characters and returns its reference. If the returned reference is ignored,
+//the original String remains unchanged.
 
 // 3. Why are passwords generally stored as char[] instead of String?
 
-// A String cannot be modified after creation, so sensitive data remains in memory until garbage collection. A char[], however, can be explicitly overwritten after use, reducing the exposure window of confidential information. Therefore, char[] is preferred for handling passwords in security-sensitive applications.
+// A String cannot be modified after creation, so sensitive data remains in memory until garbage collection.
+//A char[], however, can be explicitly overwritten after use, reducing the exposure window of confidential information.
+//Therefore, char[] is preferred for handling passwords in security-sensitive applications.
 
 
 
@@ -56,12 +67,12 @@
         
         String s="a";
         String s1=s;
-        s.concat("b");//create a new  scp string whose address is  retunred since no assignement was there so it was ignored;
+        s.concat("b");//create a new  scp string whose address is  returned since no assignement was there so it was ignored;
     System.out.println(s);
     s=s.concat("bn");// creates a new string in scp and returns its address to s, however old scp string "a" still exist in scp since s1 references to it .
         System.out.println(s);
 
-        System.out.println(s1);// prints a since still points to old object.
+        System.out.println(s1);// prints a as s still points to old scp object.
 
        
 
