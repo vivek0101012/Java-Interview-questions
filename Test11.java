@@ -31,7 +31,8 @@
 //in hashcode,and we know hashmap uses the hashcode to find the bucket ,
 //so mutated keys can give wrong bucket value failing the retrival
 
-// 5. hashmap optimization -> java also caches the hashcode for performance optimization , immutable string makes the performance consistent 
+// 5. hashmap optimization -> java also caches the hashcode for performance optimization ,
+//immutable string makes the performance consistent 
 
 
 
@@ -54,7 +55,8 @@
 // string builder is a predefined mutable class in java.lang  which allows , modification .
 // although it is not thread safe since  multiple threads modifying the same string can corrupt the data 
 
-// internally it stores the data in a character array , once the  array  is full it resizes and creates a larger character array and copy old elements . 
+// internally it stores the data in a character array , once the  array  is full it resizes
+//and creates a larger character array and copy old elements . 
 // each reasizing= old_size*2+2;
 
 //string buffer is threadsafe - mutable predefined class in java.lang that  allows the thread safe modifcation
@@ -67,9 +69,11 @@
         
         String s="a";
         String s1=s;
-        s.concat("b");//create a new  scp string whose address is  returned since no assignement was there so it was ignored;
+        s.concat("b");//create a new  scp string whose address is  returned
+       //since no assignement was there so it was ignored;
     System.out.println(s);
-    s=s.concat("bn");// creates a new string in scp and returns its address to s, however old scp string "a" still exist in scp since s1 references to it .
+    s=s.concat("bn");// creates a new string in scp and returns its address to s,
+       //however old scp string "a" still exist in scp since s1 references to it .
         System.out.println(s);
 
         System.out.println(s1);// prints a as s still points to old scp object.
