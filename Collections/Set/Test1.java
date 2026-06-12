@@ -43,15 +43,15 @@
 // code -> Set<String> set = ConcurrentHashMap.newKeySet();
 
 // Note-- > this assignment is allowed since new keyset  
-// (static factory fn (so class can use it without object)) 
-// returns a keyset  ( and it implements set interface internally so 
+// (a static factory fn (so class can use it without object)) 
+// returns a keysetview  ( and keysetview  implements set interface internally so 
 // so parent can hold child implementation )
 
 //2 Using the collections.synschronizedSet()// legacy 
 //Set<String> syncSet = Collections.synchronizedSet(new HashSet<>());
 
 
-//Q3. map.keyset also return a  set so why not use it for creating the thread safe map 
+//Q 4. map.keyset also return a  set so why not use it for creating the thread safe map 
 // by using the concurrent hashmap?
 
 //ans->  map.keySet() is an instance method that returns a live view of the keys 
