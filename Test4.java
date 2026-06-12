@@ -27,6 +27,7 @@ public class Test4 {
     }
 }
 
+
 // explain what is run time binding ?
 
 // ans> for instance methods java uses the dynamic dispatching mechanism in which the run time object is used to determine

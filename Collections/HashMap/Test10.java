@@ -31,25 +31,25 @@
 
 //overriden code example -- 
 
-@override
-public Boolean equals (object obj){
+// @override
+// public Boolean equals (object obj){
 
-if (this==obj) return true;
+// if (this==obj) return true;
 
-if(obj==null  || this.getClass()==obj.getClass()){
-return false;}
+// if(obj==null  || this.getClass()==obj.getClass()){
+// return false;}
 
-Person p= (person)obj;
+// Person p= (person)obj;
 
-if(this.id==p.id 
-&& Object.equaLs(this.name,p.name)
-&& this.age== p.age
-&& Object.equals(this.address,p.address)
-){ return true;}
-else return false ; 
-}
+// if(this.id==p.id 
+// && Object.equaLs(this.name,p.name)
+// && this.age== p.age
+// && Object.equals(this.address,p.address)
+// ){ return true;}
+// else return false ; 
+// }
 
-@Override
-    public int hashCode() {
-        return Objects.hash(id, name, age,address);
-    }
+// @Override
+//     public int hashCode() {
+//         return Objects.hash(id, name, age,address);
+//     }
