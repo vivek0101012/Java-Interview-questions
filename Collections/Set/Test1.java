@@ -28,9 +28,9 @@
 // since hashmap dont allow duplicates ,so hashset cannot store , duplicate values 
 // if key exist the value is already same dummy object (no logical change based on set )
 
-//. since hash map store object based on hashed value ,and bucket obtained ,
-//  these  are affected on resizing-rehashihg so insertion 
-// order is also not maintained
+//. HashMap stores the values based on the hashed value and bucket after from calculation
+// bucket can be different for the consecutive elements.
+//upon resizing - rehashing occurs so buckets of elements may change hence order is lost.
 
 
 // Q3.Is HashSet thread safe ? How to create thread-safe hashset?
