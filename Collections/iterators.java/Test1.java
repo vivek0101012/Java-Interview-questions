@@ -3,6 +3,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+// 1. What is a fail fast iterator ? how it throws the concurrent modification error? explain the internal working ?
 //Ans - fail fast is iterator which detects the structural changes
 //  in the collection and throws a concurrentmodificationsException.
 // If the structure changes it throws the run time error in order to avoid
